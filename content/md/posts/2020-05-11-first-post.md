@@ -19,7 +19,7 @@ issues for programmers. Things I've found noteworthy enough to share with you.
 
 ## Ideas for next post
 
-We all have the 'essential' tools required for our job:
+We all likely have the 'essential' tools required for our job:
 
 * email
 * feature/ticket system

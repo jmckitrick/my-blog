@@ -66,7 +66,7 @@ code itself. But what notes will *you* take to help you on this item?
 
 * Third party APIs and libraries
 
-    You might find that you bug takes you to a dead end. Or at least you've gone
+    You might find that your bug takes you to a dead end. Or at least you've gone
     as far with it as you can, and now you have to email tech support for a
     third party API or library. What did you learn that you can record?
 
@@ -76,5 +76,5 @@ Then, six months later, you're assigned to work on another one. And as you
 go through the steps of reproducing it, you have a familiar feeling.
 
 You could go through the entire process again, or you could dig out these notes,
-and save yourself a lot of trouble, and jump start your memory and bring back all
+save yourself a lot of trouble, and jump start your memory and bring back all
 that context from the first time you worked on the previous bug.

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+BLOG_SRC="$HOME/devel/my-blog"
+BLOG_DST="$HOME/devel/jmckitrick.github.io"
+
+rm -rf $BLOG_DST/*
+
+cp -r $BLOG_SRC/public/* $BLOG_DST
+
+# TODO: Push to git?
