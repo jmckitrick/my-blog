@@ -2,7 +2,8 @@
  :layout :post
 }
 
-## This is not your parent's VCS
+
+## This is not your parents' VCS
 
 Some of us remember when VCS meant CVS, Perforce, SourceSafe, or another classic
 like these. Most were rather straightforward to use, and did the basic job they
@@ -20,6 +21,7 @@ By now, nearly everyone has come to embrace distributed version control. While `
 is the tool most of us use, it's not the only one. Some still use `mercurial`, and
 `darcs` is still alive (and doesn't get as much credit as it should have).
 
+
 ## DVCS as a power tool
 
 Whichever tool you use, most likely it allows cheap branching, rewriting of history,
@@ -30,7 +32,7 @@ push and pull changes, and view the history log. And that's about it.
 
 While you generally won't hear any complaints about this approach, there's a huge
 opportunity being lost to leverage the tool. Have you ever heard a developer
-say they still coded with notepad? Sure, it can be done, but if a more advanced tool
+say they still coded with Notepad? Sure, it can be done, but if a more advanced tool
 exists that makes your job much easier, why not use it, right? Well, `git` and similar
 DVCS tools are similar. Once you learn to *really* use them, you will wonder why you
 waited so long to do so.
@@ -39,3 +41,54 @@ Distributed version control has had a tremendous impact on workflow. And that im
 has evolved over time. Best practices have been built up, torn down, and rebuilt. It
 has become one of those tools that has spawned entire schools of thought on how development
 should be done (CI/CD, trunk-based development with feature flags, etc).
+
+DVCS can have the same impact on your personal workflow. Do not just view version control
+as something you do when you finish a bug or feature before you move on. View it instead
+as a vital part of your recordkeeping.
+
+
+## Commit messages are extended code comments
+
+We've all heard the debate over comments in code. How much is *too* much? How little
+is *too* little? Have you ever created a multi-line comment that you felt needed to
+be there, but then deleted it because of fears it was *too* much, that it would be
+ignored, or worse yet, would be misleading if it were not maintained along with the code?
+
+In an ideal world (and codebase) the code would speak for itself, and we would never,
+EVER allow a kludge solution that requires any kind of explanation. But that's not how
+things work. Sometimes code does *not* speak for itself, especially if an ostensibly
+better implementation comes to mind the moment you view it. But sometimes there is
+more to the story than should be in a comment.
+
+Git commit messages are the place for such explanations. They will never
+suffer bitrot, because by definition they are timestamped, immutable
+and forever connected directly to the related code.
+
+Here's an example. A couple of years ago, we had a bug
+where a user got an error when they tried to save their comments in an
+audit log. It turns out the user was trying to use an emoji in their
+content. Let me say first that I am *not* an expert in unicode or
+character encoding by any means. I know or learn enough to deal with
+the issues as they arise. After some detective work, we learned that
+the system encoding in theory should have allowed emojis at both the
+platform and database levels. But as I wrote experimented with the form
+and via unit tests, I found that some emoji worked, and others did not.
+It seemed this was related to our database encoding system we had selected.
+The short explanation is that the there was a cutoff point in the unicode
+system beyond which the characters were not accepted by the database. So,
+I added validation to allow characters up to that boundary, and added unit
+tests for both working and non-working unicode characters.
+
+After the bug was fixed and the ticket closed, I still had a nagging feeling
+something was missing. I really wanted to capture the explanation of what I
+had learned and how the unit tests validated that explanation. But I never found
+a place that felt right. This didn't belong in a wiki page and it seemed
+too much for code comments. And there was the possibility that some future
+change to the platform or the database encoding could make the tests irrelevant.
+
+
+- onion approach
+- aliases/scripts for complex commands
+- GUI tools
+- editor integration
+- command line!
