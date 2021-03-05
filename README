@@ -1,6 +1,16 @@
 ## Source for my blog
 
-# Check `bin` for deployment script
+# Generating html output
+
+To view/draft changes locally:
+
+`lein ring server`
+
+To build content for deployment:
+
+`lein run`
+
+Check `bin` for deployment script
 
 # NOTES
 

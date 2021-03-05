@@ -2,7 +2,6 @@
  :layout :post
 }
 
-
 ## This is not your parents' VCS
 
 Some of us remember when VCS meant CVS, Perforce, SourceSafe, or
@@ -130,13 +129,13 @@ no good place to put it.
 This is just one example how `git` or any DVCS can have a tremendously
 positive impact on your workflow. But you need to find what works for
 you. Most of these tools have a plethora of commands and options, and
-no shortage of online tutorials showing how to use them. I've heard
-the 'onion' approach is one way to learn these tools. Start with the
-surface, until you are comfortable with it, and add deeper commands as
-you learn about them from others, or find a need unmet by your current
-level of knowledge. Many `git` users have said if you try to master it
-all at once, it's like cutting onions, and ends in tears. Some
-commands are confusing, and the options even moreso. So start slowly,
-master what you need, then add more. You might never need the git
-reflog. But you'll very likely find rebase and squash become vital
-parts of your workflow.
+no shortage of online tutorials showing how to use them. The 'onion'
+approach is one way to learn these tools. Start with the surface,
+until you are comfortable with it, and add deeper commands as you
+learn about them, or find a need unmet by your current level of
+knowledge. Many `git` users have said if you try to master it all at
+once, it's like cutting onions, and ends in tears. Some commands are
+confusing, and the options even more so. So start slowly, master what
+you need, then add more. You might never need the git reflog. But
+you'll very likely find rebase and squash become vital parts of your
+workflow.
